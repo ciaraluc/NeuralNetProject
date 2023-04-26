@@ -51,5 +51,9 @@ train_data, test_data=train_test_split(td)
 nn = NeuralNet(35, 50, 1)
 nn.train(train_data, iters=1000, print_interval=1000, learning_rate=0.1)
 
-print(nn.test_with_expected(test_data))
+# print(nn.test_with_expected(test_data))
+print()
+print("testing")
+for i in nn.test_with_expected(test_data):
+    print(f"desired: {i[1]}, actual: {i[2]}")
 
